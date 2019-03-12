@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS7_Tao}
+\author{jiongliangtao }
+\date{March 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary Table}
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+logwage & 1,669 & 1.625 & 0.386 & 0.005 & 1.362 & 1.936 & 2.261 \\ 
+hgc & 2,229 & 13.101 & 2.524 & 0 & 12 & 15 & 18 \\ 
+tenure & 2,229 & 5.971 & 5.507 & 0.000 & 1.583 & 9.333 & 25.917 \\ 
+age & 2,229 & 39.152 & 3.062 & 34 & 36 & 42 & 46 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+Log wages missing at rate of 0.2512. I think the logwage variable is most likely to be MNAR. 
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{logwage} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ hgc & 0.062$^{***}$ & 0.049$^{***}$ & 0.062$^{***}$ \\ 
+  & (0.005) & (0.004) & (0.005) \\ 
+  & & & \\ 
+ collegenot college grad & 0.146$^{***}$ & 0.160$^{***}$ & 0.146$^{***}$ \\ 
+  & (0.035) & (0.026) & (0.035) \\ 
+  & & & \\ 
+ tenure & 0.023$^{***}$ & 0.015$^{***}$ & 0.023$^{***}$ \\ 
+  & (0.002) & (0.001) & (0.002) \\ 
+  & & & \\ 
+ age & $-$0.001 & $-$0.001 & $-$0.001 \\ 
+  & (0.003) & (0.002) & (0.003) \\ 
+  & & & \\ 
+ marriedsingle & $-$0.024 & $-$0.029$^{**}$ & $-$0.024 \\ 
+  & (0.018) & (0.014) & (0.018) \\ 
+  & & & \\ 
+ Constant & 0.639$^{***}$ & 0.833$^{***}$ & 0.639$^{***}$ \\ 
+  & (0.146) & (0.115) & (0.146) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,669 & 2,229 & 1,669 \\ 
+R$^{2}$ & 0.195 & 0.132 & 0.195 \\ 
+Adjusted R$^{2}$ & 0.192 & 0.130 & 0.192 \\ 
+Residual Std. Error & 0.346 (df = 1663) & 0.311 (df = 2223) & 0.346 (df = 1663) \\ 
+F Statistic & 80.508$^{***}$ (df = 5; 1663) & 67.496$^{***}$ (df = 5; 2223) & 80.508$^{***}$ (df = 5; 1663) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+The beta1 in first model and third model is 0.062. The beta1 in second model is 0.049. Both of those two values are different from the true value. The beta1 in first model and third model is closer to the true value. So, the first and third method is better than the second method. 
+
+\section{Question 8}
+
+The data that used for this project is collected from Tweeter using API. I have collected the words people use most about this topic. I would like to see what opinions people have on this topic. I may take a linear regression model for this project. 
+
+\end{document}
