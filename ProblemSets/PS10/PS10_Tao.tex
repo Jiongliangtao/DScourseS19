@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS10_Tao}
+\author{jiongliangtao }
+\date{April 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{F1 Score}
+
+\begin{tabular}{c|cccccc}
+\hline\hline
+ & Tree & Logit & Neural Network & KNN & SVM \\ \hline
+$f1$ & 0.8901134 & 0.8977911 & 0.9055645 & 0.8959380 & 0.9046721 \\ \hline 
+$gmean$ & 0.6856084 & 0.6647932 & 0.7505631 & 0.7420789 & 0.7360211 \\ \hline 
+\end{tabular}
+
+\section{Parameters}
+\subsection{Tree Model}
+\begin{tabular}{c|cccccc}
+\hline\hline
+ Parameters & Values\\\hline
+ minsplit & 15\\\hline
+ minbucket & 40\\\hline
+ cp & 0.186
+\end{tabular}
+
+
+\subsection{Logit Model}
+\begin{tabular}{c|cccccc}
+\hline\hline
+ Parameters & Values\\\hline
+$\lambda$ & 0.0709\\\hline
+$\alpha$ & 0.13\\\hline
+\end{tabular}
+
+\subsection{Neural Network}
+\begin{tabular}{c|cccccc}
+\hline\hline
+ Parameters & Values\\\hline
+ size & 6\\\hline
+decay & 0.104\\\hline
+maxit & 1000\\\hline
+\end{tabular}
+
+
+\subsection{KNN}
+\begin{tabular}{c|cccccc}
+\hline\hline
+ Parameters & Values\\\hline
+ k & 28\\\hline
+\end{tabular}
+
+\subsection{SVM}
+\begin{tabular}{c|cccccc}
+\hline\hline
+ Parameters & Values\\\hline
+kernel & radial\\\hline
+ cost & 1\\\hline
+$\gamma$ & 0.25\\\hline
+\end{tabular}
+
+\end{document}
